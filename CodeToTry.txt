@@ -1,0 +1,27 @@
+Code to try 
+
+<section class="project-item">
+          <div class="project-image">
+            <img src="./assets/images/Project1.png" class="project" alt="" />
+            <div class="image-name image-name-hide">Covid Care</div>
+          </div>
+          <div class="project-details">
+            <div class="desc">
+              Flutter based application to aid people with mild to moderate
+              infection.
+            </div>
+            <div class="tools">
+              <ul>
+                <li><img src="./assets/images/flutter_color.png" alt="" /></li>
+                <li><img src="./assets/images/firebase_color.png" alt="" /></li>
+                <li>Figma Icon</li>
+              </ul>
+            </div>
+            <div class="github">
+              Github Link:
+              <a href="https://github.com/InduSubramanian/CovidCare"
+                >https://github.com/InduSubramanian/CovidCare</a
+              >
+            </div>
+          </div>
+        </section>

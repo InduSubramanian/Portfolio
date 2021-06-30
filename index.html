@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio With BootStrap</title>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="nav-header">
+        <div class="logo">Indu</div>
+        <button class="hamburger">
+          <img src="/assets/images/Hamburger.svg" alt="" />
+        </button>
+      </div>
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <div class="About Me">
+            <a class="active scroll-link" href="#Contact">Contact</a>
+          </div>
+          <div class="Work">
+            <a href="#work" class="scroll-link">Work</a>
+          </div>
+          <div class="Resume">
+            <a
+              href="/assets/files/183002056_ECE_SSN_2022_Indu S.pdf"
+              target="_blank"
+              >Resume</a
+            >
+          </div>
+          <div class="contacts">
+            <div class="behance">
+              <a href="https://www.behance.net/indus3">
+                <img src="/assets/images/Behance_Black_svg.svg" alt="" />
+              </a>
+            </div>
+            <div class="dribbble">
+              <a href="https://dribbble.com/HaJaeYi">
+                <img src="/assets/images/Dribbble_Black_svg.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="left">
+        <div class="content">
+          <h1>Indu Subramanian</h1>
+          <h3>UI/UX Designer | Flutter Developer</h3>
+          <p>
+            Hey! I am a Electronics and communication Engineering student who is
+            passionate about <span>bringing ideas to life using design</span>
+          </p>
+          <a href="#work">
+            <div class="workButton">
+              <p>MY WORK</p>
+              <div class="workBtnImg">
+                <img src="./assets/images/ArrowCircleIcon.png" alt="" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/assets/images/Bg1.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="work">
+      <div class="title"><h2>PROJECTS</h2></div>
+      <div class="projList flex-grid">
+        <div
+          class="proj"
+          id="CovidCare.html"
+          style="
+            background-image: url('/assets/images/CovidCare_Dribble_2.png');
+          "
+        >
+          <div class="overlay">
+            <h3>Covid Care</h3>
+          </div>
+        </div>
+
+        <div
+          class="proj"
+          onclick="window.location.href = 'http://example.com'"
+          ;
+          style="background-image: url('/assets/images/DesignOverView.png')"
+        >
+          <div class="overlay">
+            <h3>AstroConnect</h3>
+          </div>
+        </div>
+        <div
+          class="proj"
+          id="covidCare.html"
+          style="background-image: url('/assets/images/DesignOverView.png')"
+        >
+          <div class="overlay">
+            <h3>Others</h3>
+          </div>
+        </div>
+        <div
+          class="proj"
+          id="covidCare.html"
+          style="background-image: url('/assets/images/DesignOverView.png')"
+        >
+          <div class="overlay">
+            <h3>Otherrs</h3>
+          </div>
+        </div>
+        <div
+          class="proj"
+          id="covidCare.html"
+          style="background-image: url('/assets/images/DesignOverView.png')"
+        >
+          <div class="overlay">
+            <h3>Otherrrs</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="Contact">
+      <div class="title"><h2>Contact Me</h2></div>
+      <div class="Icons">
+        <div class="row">
+          <i class="fas fa-envelope"></i>
+          <p>
+            <a href="mailto: indu.subramanian01@gmail.com">Send me an Email</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>
