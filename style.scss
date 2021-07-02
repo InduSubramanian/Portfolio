@@ -45,12 +45,12 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-@media (min-height: 386px) {
+@media (min-width: 386px) {
   body {
     font-size: $mediumFontSize;
   }
 }
-@media (min-height: 768px) {
+@media (min-width: 768px) {
   body {
     font-size: $largeFontSize;
   }

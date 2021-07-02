@@ -1,0 +1,204 @@
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 2vh 10vw;
+}
+
+.intro .left {
+  padding-bottom: 2vh;
+}
+
+.intro .left .desc {
+  padding: 2vh 2vw;
+}
+
+.intro .left .tools {
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+}
+
+.intro .left .tools .tool {
+  margin-right: 2vw;
+}
+
+.intro .left .tools img {
+  width: auto;
+}
+
+.intro .right {
+  padding: 2vh 0;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+    place-content: center;
+    min-height: 80vh;
+    padding: 2vh vw5;
+  }
+  .intro .left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    width: 50vw;
+    padding-right: 10vw;
+  }
+  .intro .left .desc {
+    padding: 2vh 0;
+  }
+  .intro .left .tools {
+    text-align: left;
+    height: 36px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro .right {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    padding: 0 0;
+  }
+}
+
+.Overview .image {
+  width: 100vw;
+}
+
+.Overview .image img {
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.designDetails {
+  padding: 5vh 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.designDetails .title {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 3vh 0;
+}
+
+.designDetails .typography .font {
+  padding-bottom: 2vh;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.designDetails .typography .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  padding: 3vh 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.designDetails .typography .type .name {
+  padding-right: 10vw;
+}
+
+.designDetails .Buttons {
+  padding: 2vh 0;
+}
+
+.designDetails .Buttons .row_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.designDetails .Buttons .row_buttons .btn {
+  padding: 0 2vw;
+}
+
+.designDetails .mockup {
+  padding-top: 7vh;
+}
+
+@media (min-width: 768px) {
+  .designDetails .title {
+    font-size: 30px;
+  }
+  .designDetails .typography .font {
+    font-size: 26px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1200px) {
+  .designDetails {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5vh 5vw;
+    text-align: left;
+  }
+  .designDetails .typography .type .name {
+    padding-right: 5vw;
+  }
+  .designDetails .gap {
+    width: 6vw;
+  }
+  .designDetails .colors .colorPallete img {
+    height: auto;
+  }
+  .designDetails .colors .Buttons {
+    padding-top: 5vh;
+  }
+  .designDetails .colors .Buttons .row_buttons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .designDetails .colors .Buttons .btn {
+    padding: 0 2vw 0 0;
+  }
+  .designDetails .mockup {
+    padding-left: 3vw;
+  }
+}
+/*# sourceMappingURL=Covid_style.css.map */
