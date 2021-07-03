@@ -1,0 +1,231 @@
+// .nav-links-container {
+//   .link {
+//     &::after {
+//       background-color: linear-gradient(right #2786a2 #7b61ff);
+//     }
+//   }
+// }
+
+.Intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5vh 10vw;
+  .left {
+    padding-bottom: 2vh;
+    .title {
+      padding: 0;
+      text-align: center;
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+    .desc {
+      padding: 2vh 2vw;
+    }
+    .tools {
+      height: 24px;
+      display: flex;
+      place-content: center;
+      .tool {
+        margin-right: 2vw;
+      }
+      img {
+        width: auto;
+      }
+    }
+  }
+  .right {
+    padding: 2vh 0;
+    li {
+      margin: 1.5vh 0;
+    }
+    a {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        width: 0%;
+        background: #7b61ffb6;
+        z-index: -99;
+        transition: all linear 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+    place-content: center;
+    min-height: 80vh;
+    padding: 2vh vw5;
+    .left {
+      display: grid;
+      place-content: center;
+      width: 50vw;
+      padding-right: 10vw;
+      .desc {
+        padding: 2vh 0;
+      }
+      .tools {
+        text-align: left;
+        height: 36px;
+        justify-content: start;
+        align-items: center;
+      }
+    }
+    .right {
+      display: grid;
+      place-content: center;
+      padding: 0 0;
+    }
+  }
+}
+
+.Overview {
+  .image {
+    width: 100vw;
+    img {
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+// UserResearch
+.userResearch {
+  padding: 2vh 10vw;
+  text-align: center;
+  @media (min-width: 768px) {
+    padding: 5vh 5vw;
+    text-align: left;
+  }
+  .title {
+    text-align: center;
+    padding: 2vh 0;
+    font-weight: bold;
+    font-size: 24px;
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: 30px;
+    }
+  }
+  .name {
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 2vh 0;
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  .method {
+    .apps {
+      padding-bottom: 3vh;
+    }
+  }
+  .conclusion {
+    font-weight: bold;
+    ul {
+      font-weight: normal;
+
+      li {
+        padding: 1vh 0;
+      }
+    }
+  }
+  .userPersona {
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      padding: 2vh 2vw;
+      font-size: 18px;
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+      td {
+        border: 1px solid black;
+        padding: 2vh 2vw;
+        text-align: justify;
+      }
+      th {
+        border: 1px solid black;
+        padding: 2vh 0;
+      }
+    }
+  }
+}
+
+// Typography and Colors
+.typography {
+  padding: 2vh 10vw;
+  @media (min-width: 768px) {
+    padding: 2vh 5vw;
+  }
+  .title {
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 24px;
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: 30px;
+    }
+  }
+  .content {
+    display: flex;
+    padding: 2vh 0;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (min-width: 768px) {
+      padding: 5vh 0;
+    }
+    .font {
+      font-family: "Roboto", sans-serif;
+      padding-right: 2vw;
+      text-align: center;
+      position: relative;
+      font-size: 1.8rem;
+      &::after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        content: "Roboto";
+        color: rgba(0, 0, 0, 0.219);
+      }
+    }
+    .colorPalette {
+      width: 50%;
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
+// UserFlow chart
+.userFlow {
+  .title {
+    text-align: center;
+    padding: 2vh 10vw;
+    font-weight: bold;
+    font-size: 24px;
+    @media (min-width: 768px) {
+      text-align: left;
+      padding: 2vh 5vw;
+      font-size: 30px;
+    }
+  }
+}
+.userFlow_img {
+  width: 100vw;
+  padding: 0 1vw;
+  img {
+    height: auto;
+  }
+}

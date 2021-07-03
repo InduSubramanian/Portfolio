@@ -1,0 +1,294 @@
+.Intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 5vh 10vw;
+}
+
+.Intro .left {
+  padding-bottom: 2vh;
+}
+
+.Intro .left .title {
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .Intro .left .title {
+    text-align: left;
+  }
+}
+
+.Intro .left .desc {
+  padding: 2vh 2vw;
+}
+
+.Intro .left .tools {
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+}
+
+.Intro .left .tools .tool {
+  margin-right: 2vw;
+}
+
+.Intro .left .tools img {
+  width: auto;
+}
+
+.Intro .right {
+  padding: 2vh 0;
+}
+
+.Intro .right li {
+  margin: 1.5vh 0;
+}
+
+.Intro .right a {
+  position: relative;
+}
+
+.Intro .right a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 0%;
+  background: #7b61ffb6;
+  z-index: -99;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.Intro .right a:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .Intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+    place-content: center;
+    min-height: 80vh;
+    padding: 2vh vw5;
+  }
+  .Intro .left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    width: 50vw;
+    padding-right: 10vw;
+  }
+  .Intro .left .desc {
+    padding: 2vh 0;
+  }
+  .Intro .left .tools {
+    text-align: left;
+    height: 36px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Intro .right {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    padding: 0 0;
+  }
+}
+
+.Overview .image {
+  width: 100vw;
+}
+
+.Overview .image img {
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.userResearch {
+  padding: 2vh 10vw;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .userResearch {
+    padding: 5vh 5vw;
+    text-align: left;
+  }
+}
+
+.userResearch .title {
+  text-align: center;
+  padding: 2vh 0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .userResearch .title {
+    text-align: left;
+    font-size: 30px;
+  }
+}
+
+.userResearch .name {
+  text-decoration: underline;
+  font-size: 20px;
+  padding: 2vh 0;
+}
+
+@media (min-width: 768px) {
+  .userResearch .name {
+    font-size: 26px;
+  }
+}
+
+.userResearch .method .apps {
+  padding-bottom: 3vh;
+}
+
+.userResearch .conclusion {
+  font-weight: bold;
+}
+
+.userResearch .conclusion ul {
+  font-weight: normal;
+}
+
+.userResearch .conclusion ul li {
+  padding: 1vh 0;
+}
+
+.userResearch .userPersona table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 2vh 2vw;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .userResearch .userPersona table {
+    font-size: 24px;
+  }
+}
+
+.userResearch .userPersona table td {
+  border: 1px solid black;
+  padding: 2vh 2vw;
+  text-align: justify;
+}
+
+.userResearch .userPersona table th {
+  border: 1px solid black;
+  padding: 2vh 0;
+}
+
+.typography {
+  padding: 2vh 10vw;
+}
+
+@media (min-width: 768px) {
+  .typography {
+    padding: 2vh 5vw;
+  }
+}
+
+.typography .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .typography .title {
+    text-align: left;
+    font-size: 30px;
+  }
+}
+
+.typography .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2vh 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .typography .content {
+    padding: 5vh 0;
+  }
+}
+
+.typography .content .font {
+  font-family: "Roboto", sans-serif;
+  padding-right: 2vw;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.typography .content .font::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "Roboto";
+  color: rgba(0, 0, 0, 0.219);
+}
+
+.typography .content .colorPalette {
+  width: 50%;
+}
+
+.typography .content .colorPalette img {
+  height: auto;
+}
+
+.userFlow .title {
+  text-align: center;
+  padding: 2vh 10vw;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .userFlow .title {
+    text-align: left;
+    padding: 2vh 5vw;
+    font-size: 30px;
+  }
+}
+
+.userFlow_img {
+  width: 100vw;
+  padding: 0 1vw;
+}
+
+.userFlow_img img {
+  height: auto;
+}
+/*# sourceMappingURL=Astro_style.css.map */

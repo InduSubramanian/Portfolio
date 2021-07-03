@@ -59,8 +59,11 @@ body {
 nav {
   background-color: white;
   margin: 0;
-  padding: 5vh 10vw;
+  padding: 4vh 10vw;
   box-shadow: 2px 0 6px rgb(117, 117, 117);
+  @media (min-width: 768px) {
+    padding: 5vh 10vw;
+  }
   &.fixed-nav {
     position: fixed;
     top: 0;
@@ -72,6 +75,13 @@ nav {
   .nav-header {
     display: flex;
     justify-content: space-between;
+    .hamburger {
+      cursor: pointer;
+      height: 22px;
+      @media (min-width: 386px) {
+        height: 22px;
+      }
+    }
   }
   .nav-links-container {
     z-index: 999;
@@ -84,16 +94,38 @@ nav {
     .nav-links {
       width: 100%;
       text-align: center;
-      // height: 100%;
+      z-index: 1;
       div {
         margin: 5vh 0;
+        .link {
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 0%;
+            height: 30%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $secondaryBlue;
+            z-index: -99;
+            transition: all linear 0.3s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
       }
       .contacts {
         margin-top: 10vh;
         display: flex;
         div {
-          margin: 0 10px;
+          margin: 0 2vw;
           height: $mediumFontSize * 1.3;
+          svg {
+            width: auto;
+            height: 100%;
+          }
         }
       }
     }
@@ -135,7 +167,7 @@ nav {
   flex-direction: column;
   width: 100vw;
   text-align: center;
-  padding: 5vh 10vh;
+  padding: 5vh 10vw;
 
   h3 {
     font-weight: 500;
@@ -212,6 +244,7 @@ nav {
   .projList {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     .proj {
       border-radius: 10px;
       background-size: cover;
@@ -223,6 +256,10 @@ nav {
       cursor: pointer;
       display: grid;
       place-items: center;
+      &.notDone {
+        border: 1px solid #39393a;
+        pointer-events: none;
+      }
       .overlay {
         position: absolute;
         top: 0;
@@ -235,19 +272,24 @@ nav {
         color: rgb(0, 0, 0);
         display: grid;
         place-items: center;
-        background-color: rgba(221, 221, 221, 0.712);
+        background-color: #95d8df;
         visibility: hidden;
         opacity: 0;
-        /* transition effect. not necessary */
         transition: opacity 0.2s, visibility 0.2s;
-        // z-index: 100;
+        font-weight: bold;
+
+        &.notDone {
+          background-color: transparent;
+          visibility: visible;
+          opacity: 1;
+          font-weight: 400;
+        }
       }
       &:hover {
         box-shadow: 2px 0 5px black;
         transform: scale(1.03);
-        transition: all 0.2s linear;
+        transition: all 0.3s linear;
         .overlay {
-          //   display: inline;
           visibility: visible;
           opacity: 1;
         }
@@ -280,15 +322,52 @@ nav {
   }
 }
 
+.otherWork {
+  padding: 5vh 10vw;
+  text-align: center;
+  .title {
+    padding-bottom: 5vh;
+  }
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .work {
+      img {
+        &:hover {
+          box-shadow: 2px 2px 5px #39393a;
+          transform: scale(1.02);
+        }
+      }
+      @media (min-width: 768px) {
+        width: 45%;
+        &.full {
+          width: 100%;
+        }
+      }
+
+      margin-bottom: 2vh;
+      img {
+        height: auto;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+}
+
 footer {
   margin-top: 10vh;
   padding: 5vh 10vw;
-
   background-color: $primaryBrown;
   text-align: center;
   color: white;
   .title {
     padding-bottom: 2vh;
+    text-align: center;
   }
   .Icons {
     color: rgb(228, 228, 228);

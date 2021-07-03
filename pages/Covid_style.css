@@ -1,4 +1,4 @@
-.intro {
+.Intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,15 +10,26 @@
   padding: 2vh 10vw;
 }
 
-.intro .left {
+.Intro .left {
   padding-bottom: 2vh;
 }
 
-.intro .left .desc {
+.Intro .left .title {
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .Intro .left .title {
+    text-align: left;
+  }
+}
+
+.Intro .left .desc {
   padding: 2vh 2vw;
 }
 
-.intro .left .tools {
+.Intro .left .tools {
   height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,20 +37,45 @@
   place-content: center;
 }
 
-.intro .left .tools .tool {
+.Intro .left .tools .tool {
   margin-right: 2vw;
 }
 
-.intro .left .tools img {
+.Intro .left .tools img {
   width: auto;
 }
 
-.intro .right {
+.Intro .right {
   padding: 2vh 0;
 }
 
+.Intro .right li {
+  margin: 1.5vh 0;
+}
+
+.Intro .right a {
+  position: relative;
+}
+
+.Intro .right a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 0%;
+  background: #e9624da8;
+  z-index: -99;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.Intro .right a:hover::after {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  .intro {
+  .Intro {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -49,17 +85,17 @@
     min-height: 80vh;
     padding: 2vh vw5;
   }
-  .intro .left {
+  .Intro .left {
     display: -ms-grid;
     display: grid;
     place-content: center;
     width: 50vw;
     padding-right: 10vw;
   }
-  .intro .left .desc {
+  .Intro .left .desc {
     padding: 2vh 0;
   }
-  .intro .left .tools {
+  .Intro .left .tools {
     text-align: left;
     height: 36px;
     -webkit-box-pack: start;
@@ -69,7 +105,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .intro .right {
+  .Intro .right {
     display: -ms-grid;
     display: grid;
     place-content: center;
@@ -168,9 +204,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -179,9 +215,6 @@
   }
   .designDetails .typography .type .name {
     padding-right: 5vw;
-  }
-  .designDetails .gap {
-    width: 6vw;
   }
   .designDetails .colors .colorPallete img {
     height: auto;
@@ -198,7 +231,162 @@
     padding: 0 2vw 0 0;
   }
   .designDetails .mockup {
-    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+.features {
+  padding: 2vh 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .left .feature_list {
+  width: 50vw;
+  padding-left: 10vw;
+}
+
+@media (min-width: 768px) {
+  .features .left .feature_list {
+    padding-left: 5vw;
+  }
+}
+
+.features .left .feature_list .feature .desc {
+  font-weight: 100;
+}
+
+.features .right {
+  padding: 0 10vw;
+}
+
+@media (min-width: 768px) {
+  .features .right {
+    padding: 0 5vw;
+  }
+}
+
+.features .right .rectangle {
+  width: 10vw;
+  height: 80vh;
+  background-color: #1d617a;
+  border-radius: 20px;
+  position: relative;
+}
+
+.features .right .rectangle .gif {
+  height: 90%;
+  width: 180%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  border-radius: 10px;
+}
+
+.userFlow .title {
+  text-align: center;
+  padding: 2vh 10vw;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .userFlow .title {
+    text-align: left;
+    padding: 2vh 5vw;
+    font-size: 30px;
+  }
+}
+
+.userFlow_img {
+  width: 100vw;
+}
+
+.userFlow_img img {
+  height: auto;
+}
+
+.code {
+  padding: 2vh 0;
+  text-align: center;
+}
+
+.code .title {
+  text-align: center;
+  padding: 2vh 10vw;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .code .title {
+    text-align: left;
+    padding: 2vh 5vw;
+    font-size: 30px;
+  }
+}
+
+.code .content {
+  font-weight: 100;
+  padding: 2vh 10vw;
+}
+
+@media (min-width: 768px) {
+  .code .content {
+    padding: 2vh 5vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .code {
+    text-align: left;
+  }
+}
+
+.code a.Covid_code {
+  padding: 0 10vw;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .code a.Covid_code {
+    padding: 0 5vw;
+  }
+}
+
+.code a.Covid_code::after {
+  content: "";
+  z-index: -99;
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: #9ac5e2;
+  top: 0;
+  left: 0;
+  -webkit-transition: width linear 0.3s;
+  transition: width linear 0.3s;
+}
+
+.code a.Covid_code:hover::after {
+  width: 100%;
+}
+
+.nextProject {
+  padding: 1vh 5vw;
+  text-align: right;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .nextProject {
+    padding: 1vh 10vw;
   }
 }
 /*# sourceMappingURL=Covid_style.css.map */
